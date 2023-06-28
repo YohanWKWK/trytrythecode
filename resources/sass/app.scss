@@ -1,0 +1,29 @@
+// // Fonts
+// @import url('https://fonts.bunny.net/css?family=Nunito');
+
+// // Variables
+// @import 'variables';
+
+// Bootstrap
+@import 'bootstrap/scss/bootstrap';
+@import "bootstrap-icons/font/bootstrap-icons.css";
+
+.btn-primary {
+    color: #000;
+    font-weight: 300;
+}
+
+.card-title {
+    color: #FFF
+}
+
+.card-bg {
+    background-image: url("../images/ikan-air-tawar.png");
+    background-repeat: no-repeat;
+}
+
+.card-body {
+    width: 310px;
+    height: 390px;
+    flex-shrink: 0;
+}
