@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AirTawarController;
+use App\Http\Controllers\LoginController;
 
 
 /*
@@ -15,8 +16,19 @@ use App\Http\Controllers\AirTawarController;
 |
 */
 
-Route::get('/welcome', function () {
+Route::get('/', function () {
     return view('welcome');
 });
 
 Route::get('air-tawar', [AirTawarController::class, 'index']);
+
+// test halaman
+// | | | | | |
+// | | | | | |
+// V V V V V V
+
+// Route::get('/', function () {
+//     return view('welcome');
+// });
+
+Route::get('login', [LoginController::class, 'index']);
