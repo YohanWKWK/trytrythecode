@@ -13,7 +13,7 @@
         @vite('resources/sass/app.scss')
     </head>
     <body class="custom-bg">
-        <nav class="navbar navbar-expand-lg" style="background: linear-gradient(250deg, #213555 0%, #46B7B7 100%);
+        <nav class="navbar navbar-expand-lg" style="background: linear-gradient(1deg, #213555 0%, #46B7B7 100%);
         ">
             <div class="container">
 
@@ -26,7 +26,7 @@
                     {{-- Mailbox & Nama user --}}
                     <div class="container-fluid">
                         <form class="d-flex" role="search">
-                          <button class="btn btn-warning btn-style" type="submit">LOGIN</button>
+                          <button class="btn btn-warning btn-style" type="submit" href="{{url( "login" )}}">LOGIN</button>
                         </form>
                     </div>
                 </span>
@@ -43,6 +43,7 @@
 
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous">
         </script>
+
 
         <footer class="footer mt-auto py-3" style="background: linear-gradient(320deg, #213555 0%, #46B7B7 100%);">
         </footer>
