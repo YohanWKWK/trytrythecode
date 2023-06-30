@@ -1,6 +1,6 @@
 @extends('layouts.main')
 
-@section('title', 'Box Of Fish')
+@section('title', 'Box Of Fish | Dasboard')
 
 {{-- ini navigation 2 --}}
 @section('navigation2')

@@ -2,7 +2,8 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AirTawarController;
-use App\Http\Controllers\LoginController;
+use App\Http\Controllers\AuthController;
+use App\Http\Controllers\DasboardController;
 
 
 /*
@@ -20,15 +21,12 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('air-tawar', [AirTawarController::class, 'index']);
+Route::get('login', [AuthController::class, 'login']);
+Route::post('login', [AuthController::class, 'authenticate']);
+Route::get('logout', [AuthController::class, 'logout']);
+Route::get('register', [AuthController::class, 'register_form']);
+Route::post('register', [AuthController::class, 'register']);
 
-// test halaman
-// | | | | | |
-// | | | | | |
-// V V V V V V
 
-// Route::get('/', function () {
-//     return view('welcome');
-// });
-
-Route::get('login', [LoginController::class, 'index']);
+Route::get('dashboard', [DasboardController::class, 'index']);
+Route::get('product/air-tawar', [AirTawarController::class, 'index']);
