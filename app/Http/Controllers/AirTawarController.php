@@ -22,7 +22,7 @@ class AirTawarController extends Controller
         ];
 
         // dd($view_data);
-        return view('air-tawar', $view_data);
+        return view('products.air_tawar.air-tawar', $view_data);
     }
 
     /**
