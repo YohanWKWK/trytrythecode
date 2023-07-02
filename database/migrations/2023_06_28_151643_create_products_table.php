@@ -13,13 +13,13 @@ return new class extends Migration
     {
         Schema::create('products', function (Blueprint $table) {
             $table->id();
-            $table->unsignedBigInteger('id_user');
+            $table->unsignedBigInteger('user_id');
             $table->string('product_name');
-            $table->enum('category', ['Air Tawar', 'Air Laut', 'Tanaman Air']);
+            $table->enum('category', ['air tawar', 'air laut', 'tanaman air']);
             $table->text('description');
             $table->decimal('price');
-            $table->string('photo')->nullable();
-            $table->foreign('id_user')->references('id')->on('users');
+            $table->string('image_path');
+            $table->foreign('user_id')->references('id')->on('users');
             $table->timestamps();
         });
     }
