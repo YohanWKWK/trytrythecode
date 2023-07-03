@@ -14,7 +14,7 @@ return new class extends Migration
         Schema::table('users', function (Blueprint $table) {
             $table->string('kota_kabupaten')->nullable()->after('email_verified_at');
             $table->text('alamat_lengkap')->nullable()->after('kota_kabupaten');
-            $table->string('photo')->nullable()->after('alamat_lengkap');
+            $table->string('image_path')->after('alamat_lengkap');
         });
     }
 
@@ -24,7 +24,7 @@ return new class extends Migration
     public function down(): void
     {
         Schema::table('users', function (Blueprint $table) {
-            $table->dropColumn(['kota_kabupaten', 'alamat_lengkap', 'photo']);
+            $table->dropColumn(['kota_kabupaten', 'alamat_lengkap', 'image_path']);
         });
     }
 };
