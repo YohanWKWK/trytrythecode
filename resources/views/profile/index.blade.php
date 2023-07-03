@@ -108,21 +108,33 @@
             @foreach ($products as $product)
                 @php
                     $slug_category = str_replace(' ', '-', $product->category);
+                    $descriptionLimited = Str::limit($product->description, 75);
+                    $formattedPrice = number_format($product->price, 2, ',', '.');
                 @endphp
-                <div class="row pt-3">
-                    <div class="col-md-1 thermed-grid-col"></div>
-                    <div class="col-md-2 thermed-grid-col">
-                        <img src="{{ asset("photos/products_photo/$product->image_path") }} "
+                <div class="row pt-1 mb-1">
+                    <div class="col-md-1 thermed-grid-col d-flex align-items-center justify-content-center">
+                        <!-- Isi kolom -->
+                    </div>
+                    <div class="col-md-2 thermed-grid-col d-flex align-items-center justify-content-center">
+                        <img src="{{ asset("photos/products_photo/$product->image_path") }}"
                             alt="{{ $product->product_name }}" width="100" height="75">
                     </div>
-                    <div class="col-md-2 thermed-grid-col"> {{ $product->product_name }} </div>
-                    <div class="col-md-2 thermed-grid-col"> {{ $product->description }} </div>
-                    <div class="col-md-2 thermed-grid-col"> Rp{{ $product->price }} </div>
-                    <div class="col-md-2 thermed-grid-col">
+                    <div class="col-md-2 thermed-grid-col d-flex align-items-center justify-content-center">
+                        {{ $product->product_name }}
+                    </div>
+                    <div class="col-md-2 thermed-grid-col d-flex align-items-center justify-content-center">
+                        {{ $descriptionLimited }}
+                    </div>
+                    <div class="col-md-2 thermed-grid-col d-flex align-items-center justify-content-center">
+                        Rp{{ $formattedPrice }}
+                    </div>
+                    <div class="col-md-2 thermed-grid-col d-flex align-items-center justify-content-center">
                         <a href="{{ url("products/$slug_category/$product->slug/edit") }}"
                             class="btn btn-warning rounded-pill btn-style">Edit</a>
                     </div>
-                    <div class="col-md-1 thermed-grid-col"></div>
+                    <div class="col-md-1 thermed-grid-col d-flex align-items-center justify-content-center">
+                        <!-- Isi kolom -->
+                    </div>
                 </div>
             @endforeach
         </div>

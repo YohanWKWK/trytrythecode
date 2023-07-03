@@ -25,23 +25,45 @@
                 <label for="product_name" class="form-label">Product Name</label>
                 <input type="text" class="form-control" id="product_name" name="product_name"
                     value="{{ $product->product_name }}">
+                @if ($errors->has('product_name'))
+                    <span class="text-danger">{{ $errors->first('product_name') }} </span>
+                @endif
             </div>
             <div class="mb-3">
                 <label for="category" class="form-label">Category</label>
                 <select class="form-select" id="category" name="category" aria-valuetext="{{ $product->category }}">
-                    <option value="air tawar">Air Tawar</option>
-                    <option value="air laut">Air Laut</option>
-                    <option value="tanaman air">Tanaman Air</option>
+                    <option value="air tawar" @if ($product->category === 'air tawar') selected @endif>Air Tawar</option>
+                    <option value="air laut" @if ($product->category === 'air laut') selected @endif>Air Laut</option>
+                    <option value="tanaman air" @if ($product->category === 'tanaman air') selected @endif>Tanaman Air</option>
                 </select>
+                @if ($errors->has('category'))
+                    <span class="text-danger">{{ $errors->first('category') }} </span>
+                @endif
             </div>
             <div class="mb-3">
                 <label for="description" class="form-label">Description</label>
                 <textarea class="form-control" id="description" name="description" rows="4">{{ $product->description }}</textarea>
+                @if ($errors->has('description'))
+                    <span class="text-danger">{{ $errors->first('descripti') }} </span>
+                @endif
             </div>
             <div class="mb-3">
                 <label for="price" class="form-label">Price</label>
                 <input type="number" class="form-control" id="price" name="price" step="0.01"
                     value="{{ $product->price }}">
+                @if ($errors->has('price'))
+                    <span class="text-danger">{{ $errors->first('price') }} </span>
+                @endif
+            </div>
+            <div class="mb-3">
+                <label for="order_type" class="form-label">Order Type</label>
+                <select class="form-select" id="order_type" name="order_type">
+                    <option value="wts" @if ($product->order_type === 'wts') selected @endif>Want to Sell</option>
+                    <option value="wtb" @if ($product->order_type === 'wtb') selected @endif>Want to Buy</option>
+                </select>
+                @if ($errors->has('order_type'))
+                    <span class="text-danger">{{ $errors->first('order_type') }} </span>
+                @endif
             </div>
             <div class="mb-3">
                 <label for="image" class="form-label">Photo</label>
@@ -50,6 +72,9 @@
                 @if ($product->image_path)
                     <p>Current Image: {{ $product->image_path }}</p>
                 @endif
+                @if ($errors->has('image'))
+                    <span class="text-danger">{{ $errors->first('image') }} </span>
+                @endif
             </div>
             <div class="mb-3 d-flex justify-content-center align-items-center">
                 <img id="preview-image-before-upload" src=" {{ asset("photos/products_photo/$product->image_path") }} "
@@ -57,7 +82,7 @@
             </div>
             <div class="mb-3 d-flex justify-content-end align-items-center">
                 <button type="submit" class="btn btn-primary me-3">Submit</button>
-                {{-- <button type="submit" class="btn btn-danger">Cancel</button> --}}
+                <a href="{{ url("profile/$user->id") }}" type="submit" class="btn btn-danger">Cancel</a>
             </div>
         </form>
     </div>

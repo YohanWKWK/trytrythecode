@@ -17,7 +17,8 @@ class product extends Model
         'category',
         'description',
         'price',
-        'image_path'
+        'image_path',
+        'order_type'
     ];
 
     public static function boot()
