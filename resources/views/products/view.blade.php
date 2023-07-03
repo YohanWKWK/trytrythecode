@@ -33,19 +33,19 @@
                 </div>
                 <div class="p-2 mb-2 col-md-12 rounded bg-body-secondary d-flex justify-content-center align-items-center">
                     <div class="col-md-6">
-                        <h6> {{ $user->name }} </h6>
-                        <p> {{ $user->kota_kabupaten }} </p>
+                        <h6> {{ $user_product->name }} </h6>
+                        <p> {{ $user_product->kota_kabupaten }} </p>
                     </div>
-                    <div class="col-md-6 rounded-circle d-flex justify-content-center align-items-center">
+                    <div class="col-md-6 rounded-circle circle d-flex justify-content-center align-items-center">
                         <img src="{{ asset('photos/users_photo/1688215634.jpg') }}" alt="" width="100">
                     </div>
                 </div>
                 <div class="p-2 mb-2 col-md-12 rounded bg-body-secondary d-flex justify-content-center align-items-center">
                     <div class="container-fluid col-md-6 d-flex justify-content-center align-items-center">
-                        <a class="btn btn-warning btn-style" type="button" href="{{ url('') }}">CHAT</a>
+                        <a class="btn btn-warning btn-style" type="button" href="{{ url('#') }}">CHAT</a>
                     </div>
                     <div class="container-fluid col-md-6 d-flex justify-content-center align-items-center">
-                        <a class="btn btn-success btn-style" type="button" href="{{ url('') }}">BELI</a>
+                        <a class="btn btn-success btn-style" type="button" href="{{ url('#') }}">BELI</a>
                     </div>
                 </div>
             </div>

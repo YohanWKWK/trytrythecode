@@ -7,9 +7,13 @@
     <title>Box Of Fish | User Profile</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous">
+    </script>
+    @vite('resources/sass/profile.scss')
 
     <style>
-        .rounded-circle {
+        .circle {
             width: 100px;
             height: 100px;
             border-radius: 50%;
@@ -40,7 +44,7 @@
                     <div class="card-body">
                         <div class="d-flex flex-column align-items-center text-center">
                             <img src="{{ asset("photos/users_photo/$user->image_path") }}" alt="{{ $user->name }}"
-                                class="rounded-circle" style="width: 150px; height: 150px;">
+                                class="circle" style="width: 150px; height: 150px;">
                         </div>
                     </div>
                 </div>
@@ -115,7 +119,7 @@
                     <div class="col-md-2 thermed-grid-col"> {{ $product->description }} </div>
                     <div class="col-md-2 thermed-grid-col"> Rp{{ $product->price }} </div>
                     <div class="col-md-2 thermed-grid-col">
-                        <a href="{{ url("products/$product->id/edit") }}"
+                        <a href="{{ url("products/$slug_category/$product->slug/edit") }}"
                             class="btn btn-warning rounded-pill btn-style">Edit</a>
                     </div>
                     <div class="col-md-1 thermed-grid-col"></div>

@@ -40,7 +40,7 @@
         <div class="container mt-5">
             <div class="row">
                 <div class="col-sm-4">
-                    <div class="card-bg card text-center mb-3" style="width: 18rem;">
+                    <div class="card-bg-1 card text-center mb-3" style="width: 18rem;">
                         <div class="card-body">
                             <h5 class="card-title">AIR TAWAR</h5>
                             <a href="{{ url('products/air-tawar') }}" class="btn btn-warning btn-style">cek</a>
@@ -48,7 +48,7 @@
                     </div>
                 </div>
                 <div class="col-sm-4">
-                    <div class="card-bg card text-center mb-3" style="width: 18rem;">
+                    <div class="card-bg-2 card text-center mb-3" style="width: 18rem;">
                         <div class="card-body">
                             <h5 class="card-title">AIR LAUT</h5>
                             <a href="{{ url('products/air-laut') }}" class="btn btn-warning btn-style">cek</a>
@@ -56,7 +56,7 @@
                     </div>
                 </div>
                 <div class="col-sm-4">
-                    <div class="card-bg card text-center mb-3" style="width: 18rem;">
+                    <div class="card-bg-3 card text-center mb-3" style="width: 18rem;">
                         <div class="card-body">
                             <h5 class="card-title">TANAMAN AIR</h5>
                             <a href="{{ url('products/tanaman-air') }}" class="btn btn-warning btn-style">cek</a>

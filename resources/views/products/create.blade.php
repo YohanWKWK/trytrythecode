@@ -39,7 +39,7 @@
                 <label for="image" class="form-label">Photo</label>
                 <input type="file" class="form-control" id="image" name="image" accept=".png, .jpg, .jpeg">
             </div>
-            <button type="submit" class="btn btn-primary">Submit</button>
+            <button type="submit" class="btn btn-primary mb-3">Submit</button>
         </form>
     </div>
 

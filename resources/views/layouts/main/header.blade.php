@@ -1,17 +1,46 @@
-<nav class="navbar navbar-expand-lg" style="background: linear-gradient(1deg, #213555 0%, #46B7B7 100%);">
+<header class="py-2 p-1 border-bottom" style="background: linear-gradient(1deg, #213555 0%, #46B7B7 100%);">
     <div class="container">
+        <div class="container-fluid d-grid gap-3 align-items-center justify-content-between"
+            style="grid-template-columns: 1fr 2fr;">
+            <a href="#"
+                class="d-flex align-items-center col-lg-4 mb-2 mb-lg-0 link-body-emphasis text-decoration-none">
+                <img src="{{ asset('images/Logo 1.png') }}" class="bi me-2" width="60" height="60">
+            </a>
+            <div class="text-end">
 
-        <a class="navbar-brand" href="/welcome">
-            <img href="{{ url('/') }}" src="{{ asset('images/Logo 1.png') }}" alt="Logo 1" width="60"
-                height="60" class="d-inline-block align-text-top">
-        </a>
+                @if (Auth::check())
+                    <div class="d-flex align-items-center">
+                        <div class="w-100 me-3 d-flex align-items-center justify-content-end">
+                            <a href="#" class="btn btn-warning btn-style">MAIL BOX</a>
+                        </div>
+                        <div class="col-md-auto me-3 text-end text-light">
+                            <p class="fs-6 fw-light mb-0"> {{ $user->name }} </p>
+                            <p class="fs-6 fw-light mb-0"> {{ $user->kota_kabupaten }} </p>
+                        </div>
 
+                        <div class="flex-shrink-0 dropdown">
+                            <a href="#"
+                                class="d-block link-body-emphasis text-decoration-none dropdown-toggle btn-light"
+                                role="button" data-bs-toggle="dropdown" aria-expanded="false" data-bs-offset="0,20">
+                                <img src="{{ asset("photos/users_photo/$user->image_path") }}" alt="mdo"
+                                    width="32" height="32" class="rounded-circle">
+                            </a>
+                            <ul class="dropdown-menu text-small shadow">
+                                <li><a class="dropdown-item" href="#">Settings</a></li>
+                                <li><a class="dropdown-item" href="{{ url("profile/$user->id") }}">Profile</a></li>
+                                <li>
+                                    <hr class="dropdown-divider">
+                                </li>
+                                <li><a class="dropdown-item" href="{{ url('logout') }}">Sign out</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                @else
+                    <a href="{{ url('login') }}" class="btn btn-warning btn-style me-2">LOGIN</a>
+                    <a href="{{ url('register') }}" class="btn btn-primary btn-style me-2">REGISTER</a>
+                @endif
 
-        <span>
-            {{-- Mailbox & Nama user --}}
-            <div class="container-fluid">
-                <a class="btn btn-warning btn-style" type="button" href="{{ url('login') }}">LOGIN</a>
             </div>
-        </span>
+        </div>
     </div>
-</nav>
+</header>
