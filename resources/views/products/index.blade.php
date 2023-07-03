@@ -20,34 +20,37 @@
     {{-- Filter Start --}}
     <div class="container mt-5">
         <div class="">
-            <div class="row">
+            <form action="" method="post">
 
-                {{-- Filter Tipe Order --}}
-                <div class="col-md-4 mt-2">
-                    <h6 class="mb-3">Order Type</h6>
-                    <select class="form-select form-select-sm" aria-label=".form-select-sm example">
-                        <option value="penjual">Penjual</option>
-                        <option value="pembeli">Pembeli</option>
-                    </select>
-                </div>
+                <div class="row">
 
-                {{-- Filter Lokasi --}}
-                <div class="col-md-4 mt-2">
-                    <h6 class="mb-3">Lokasi</h6>
-                    <select class="form-select form-select-sm" aria-label=".form-select-sm example">
-                        <option value="Aceh">Aceh</option>
-                        <option value="Sumatra Utara">Sumatra Utara</option>
-                        <option value="Sumatra Barat">Sumatra Barat</option>
-                        <option value="Riau">Riau</option>
-                        <option value="Jambi">Jambi</option>
-                        <option value="Sumatra Selatan">Sumatra Selatan</option>
-                    </select>
-                </div>
+                    {{-- Filter Tipe Order --}}
+                    <div class="col-md-4 mt-2">
+                        <h6 class="mb-3">Order Type</h6>
+                        <select class="form-select form-select-sm" aria-label=".form-select-sm example">
+                            <option value="penjual">Penjual</option>
+                            <option value="pembeli">Pembeli</option>
+                        </select>
+                    </div>
 
-                <div class="col-md-4 d-flex justify-content-center align-items-center mt-2">
-                    <button class="btn btn-warning btn-style" type="submit">Terapkan</button>
+                    {{-- Filter Lokasi --}}
+                    <div class="col-md-4 mt-2">
+                        <h6 class="mb-3">Lokasi</h6>
+                        <select class="form-select form-select-sm" aria-label=".form-select-sm example">
+                            <option value="Aceh">Aceh</option>
+                            <option value="Sumatra Utara">Sumatra Utara</option>
+                            <option value="Sumatra Barat">Sumatra Barat</option>
+                            <option value="Riau">Riau</option>
+                            <option value="Jambi">Jambi</option>
+                            <option value="Sumatra Selatan">Sumatra Selatan</option>
+                        </select>
+                    </div>
+
+                    <div class="col-md-4 d-flex justify-content-center align-items-center mt-2">
+                        <button class="btn btn-warning btn-style" type="submit">Terapkan</button>
+                    </div>
                 </div>
-            </div>
+            </form>
         </div>
     </div>
 
@@ -68,23 +71,36 @@
             @foreach ($products as $product)
                 @php
                     $slug_category = str_replace(' ', '-', $product->category);
+                    $descriptionLimited = Str::limit($product->description, 75);
+                    $formattedPrice = number_format($product->price, 2, ',', '.');
                 @endphp
-                <div class="row pt-3">
-                    <div class="col-md-1 thermed-grid-col"></div>
-                    <div class="col-md-2 thermed-grid-col">
-                        <img src="{{ asset("photos/products_photo/$product->image_path") }} "
+                <div class="row pt-1 mb-1">
+                    <div class="col-md-1 thermed-grid-col d-flex align-items-center justify-content-center">
+                        <!-- Isi kolom -->
+                    </div>
+                    <div class="col-md-2 thermed-grid-col d-flex align-items-center justify-content-center">
+                        <img src="{{ asset("photos/products_photo/$product->image_path") }}"
                             alt="{{ $product->product_name }}" width="100" height="75">
                     </div>
-                    <div class="col-md-2 thermed-grid-col"> {{ $product->product_name }} </div>
-                    <div class="col-md-2 thermed-grid-col"> {{ $product->description }} </div>
-                    <div class="col-md-2 thermed-grid-col"> Rp{{ $product->price }} </div>
-                    <div class="col-md-2 thermed-grid-col">
+                    <div class="col-md-2 thermed-grid-col d-flex align-items-center justify-content-center">
+                        {{ $product->product_name }}
+                    </div>
+                    <div class="col-md-2 thermed-grid-col d-flex align-items-center justify-content-center">
+                        {{ $descriptionLimited }}
+                    </div>
+                    <div class="col-md-2 thermed-grid-col d-flex align-items-center justify-content-center">
+                        Rp{{ $formattedPrice }}
+                    </div>
+                    <div class="col-md-2 thermed-grid-col d-flex align-items-center justify-content-center">
                         <a href="{{ url("products/$slug_category/$product->slug") }}"
                             class="btn btn-warning rounded-pill btn-style">Lihat</a>
                     </div>
-                    <div class="col-md-1 thermed-grid-col"></div>
+                    <div class="col-md-1 thermed-grid-col d-flex align-items-center justify-content-center">
+                        <!-- Isi kolom -->
+                    </div>
                 </div>
             @endforeach
+
         </div>
     </div>
     {{-- Show Product End --}}

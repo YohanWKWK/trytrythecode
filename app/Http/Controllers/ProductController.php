@@ -95,6 +95,7 @@ class ProductController extends Controller
             'category' => 'required',
             'description' => 'required',
             'price' => 'required',
+            'order_type' => 'required',
             'image' => [
                 'required',
                 FILE::image()
@@ -113,6 +114,7 @@ class ProductController extends Controller
         $category = $request->input('category');
         $description = $request->input('description');
         $price = $request->input('price');
+        $order_type = $request->input('order_type');
         // $image_path = $path . $image_name;
         $user_id = Auth::id();
         // dd($image_name);
@@ -123,7 +125,8 @@ class ProductController extends Controller
             'category' => $category,
             'description' => $description,
             'price' => $price,
-            'image_path' => $image_name
+            'image_path' => $image_name,
+            'order_type' => $order_type,
         ]);
 
         return redirect('products');
@@ -196,6 +199,7 @@ class ProductController extends Controller
             'category' => 'required',
             'description' => 'required',
             'price' => 'required',
+            'order_type' => 'required',
             'image' => [
                 'sometimes', // Allow image field to be optional
                 'image', // Must be an image
@@ -212,6 +216,7 @@ class ProductController extends Controller
         $category = $request->input('category');
         $description = $request->input('description');
         $price = $request->input('price');
+        $order_type = $request->input('order_type');
 
         // Check if a new image is provided
         if ($request->hasFile('image')) {
@@ -236,6 +241,7 @@ class ProductController extends Controller
         $product->category = $category;
         $product->description = $description;
         $product->price = $price;
+        $product->order_type = $order_type;
         $product->save();
 
         $category_slug = str_replace(' ', '-', $category);
