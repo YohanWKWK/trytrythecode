@@ -56,7 +56,7 @@ class AuthController extends Controller
                 File::image()
                     ->types(['png', 'jpg', 'jpeg'])
                     ->min(1)
-                    ->max(2 * 1024)
+                    ->max(5 * 1024)
             ],
         ]);
 
@@ -65,7 +65,7 @@ class AuthController extends Controller
         // dd($imageName);
         $path = public_path('photos/users_photo/');
         $image->move($path, $image_name);
-        $image_path = $path . $image_name;
+        $image_path = $image_name;
 
         // dd($image);
         User::create([

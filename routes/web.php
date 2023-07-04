@@ -7,6 +7,7 @@ use App\Http\Controllers\AuthController;
 use App\Http\Controllers\DasboardController;
 use App\Http\Controllers\ProductController;
 use App\Http\Controllers\UserController;
+use App\Http\Controllers\OrderController;
 
 
 /*
@@ -49,3 +50,5 @@ Route::get('products/{category}/{slug}', [ProductController::class, 'show'])->na
 Route::post('products', [ProductController::class, 'store']);
 Route::get('products/{category}/{slug}/edit', [ProductController::class, 'edit']);
 Route::patch('products/{category}/{id}', [ProductController::class, 'update'])->name('products.update');
+
+Route::get('order/{productId}', [OrderController::class, 'showOrderForm'])->name('order.form');

@@ -45,7 +45,7 @@
                         <a class="btn btn-warning btn-style" type="button" href="{{ url('#') }}">CHAT</a>
                     </div>
                     <div class="container-fluid col-md-6 d-flex justify-content-center align-items-center">
-                        <a class="btn btn-success btn-style" type="button" href="{{ url('#') }}">BELI</a>
+                        <a class="btn btn-success btn-style" type="button" href="{{ url("order/$product->id") }}">BELI</a>
                     </div>
                 </div>
             </div>
