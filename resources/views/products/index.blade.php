@@ -43,6 +43,7 @@
                             <option value="Riau">Riau</option>
                             <option value="Jambi">Jambi</option>
                             <option value="Sumatra Selatan">Sumatra Selatan</option>
+                            <option value="Sumatra Selatan">Surabaya</option>
                         </select>
                     </div>
 
@@ -57,7 +58,7 @@
     {{-- Filter End --}}
 
     {{-- Show Product Start --}}
-    <div class="row mb-3 mt-4 text-center bg-primary bg-gradient">
+    <div class="row mb-3 mt-4 text-center">
         <div class="col-md themed-grid-col">
             <div class="row pt-1 pb-1" style="background: linear-gradient(18deg, #46B7B7 0% , #213555 100%);">
                 <div class="col-md-1 thermed-grid-col"></div>
