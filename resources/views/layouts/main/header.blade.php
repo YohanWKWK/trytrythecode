@@ -2,7 +2,7 @@
     <div class="container">
         <div class="container-fluid d-grid gap-3 align-items-center justify-content-between"
             style="grid-template-columns: 1fr 2fr;">
-            <a href="#"
+            <a href="{{ url('/') }}"
                 class="d-flex align-items-center col-lg-4 mb-2 mb-lg-0 link-body-emphasis text-decoration-none">
                 <img src="{{ asset('images/Logo 1.png') }}" class="bi me-2" width="60" height="60">
             </a>
