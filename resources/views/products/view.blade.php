@@ -37,7 +37,7 @@
                         <p> {{ $user_product->kota_kabupaten }} </p>
                     </div>
                     <div class="col-md-6 rounded-circle circle d-flex justify-content-center align-items-center">
-                        <img src="{{ asset('photos/users_photo/1688215634.jpg') }}" alt="" width="100">
+                        <img src="{{ asset("photos/users_photo/$user_product->image_path") }}" alt="" width="100">
                     </div>
                 </div>
                 <div class="p-2 mb-2 col-md-12 rounded bg-body-secondary d-flex justify-content-center align-items-center">

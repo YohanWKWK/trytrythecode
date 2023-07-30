@@ -5,11 +5,6 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>login</title>
-    <style>
-        .custom-bg {
-            background-color: #64a0c68d;
-        }
-    </style>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
     @vite('resources/sass/app.scss')
@@ -20,7 +15,7 @@
         <div class="container">
             <div class="card text-center card-login"
                 style="width: 19rem; height: 26rem;
-                background: linear-gradient(147deg, #213555 0%, #64C6B4 100%); border:none ;">
+                background: background-color: #213655 ; border:none ;">
                 <div class="card-body">
 
                     <img src="{{ asset('images/Logo 1.png') }}" alt="Logo 1" width="40" height="40"
@@ -33,7 +28,7 @@
                         font-style: normal;
                         font-weight: 380;
                         line-height: normal;">
-                        LOGIN TO BOX OF FISH
+                        LOGIN TO SI I-TEM
                     </h3>
 
                     <br>

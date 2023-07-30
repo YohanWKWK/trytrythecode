@@ -11,9 +11,6 @@
         integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
 
     <style>
-        .custom-bg {
-            background-color: #64a0c68d;
-        }
 
         .card-regist {
             margin: auto;
@@ -39,7 +36,7 @@
         <div class="container">
             <div class="card text-center card-regist"
                 style="width: 35rem; height: auto;
-                background: linear-gradient(147deg, #213555 0%, #64C6B4 100%); border-radius: 1rem; ;">
+                background-color: #213655; border-radius: 1rem; ;">
                 <div class="card-body">
                     <img src="{{ asset('images/Logo 1.png') }}" alt="Logo 1" width="40" height="40">
                     <br>
@@ -50,7 +47,7 @@
                         font-style: normal;
                         font-weight: 380;
                         line-height: normal;">
-                        REGISTRATION TO BOX FISH
+                        REGISTRATION TO SI I-TTEM
                     </h3>
                     @if (session()->has('error_message'))
                         <div class="alert alert-danger">

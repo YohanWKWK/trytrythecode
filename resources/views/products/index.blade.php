@@ -3,47 +3,18 @@
 @section('title', 'Box Of Fish | Products')
 
 @section('content')
-    {{-- Search Start --}}
-    <div class="container mt-5">
-        <div class="row justify-content-center">
-            <div class="col-md-8">
-                <form class="d-flex" role="search">
-                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-                    <button class="btn btn-outline-success" type="submit">Search</button>
-                </form>
-            </div>
-        </div>
-    </div>
-
-    {{-- Search End --}}
 
     {{-- Filter Start --}}
     <div class="container mt-5">
         <div class="">
             <form action="" method="post">
-
                 <div class="row">
-
                     {{-- Filter Tipe Order --}}
                     <div class="col-md-4 mt-2">
                         <h6 class="mb-3">Order Type</h6>
                         <select class="form-select form-select-sm" aria-label=".form-select-sm example">
-                            <option value="penjual">Penjual</option>
-                            <option value="pembeli">Pembeli</option>
-                        </select>
-                    </div>
-
-                    {{-- Filter Lokasi --}}
-                    <div class="col-md-4 mt-2">
-                        <h6 class="mb-3">Lokasi</h6>
-                        <select class="form-select form-select-sm" aria-label=".form-select-sm example">
-                            <option value="Aceh">Aceh</option>
-                            <option value="Sumatra Utara">Sumatra Utara</option>
-                            <option value="Sumatra Barat">Sumatra Barat</option>
-                            <option value="Riau">Riau</option>
-                            <option value="Jambi">Jambi</option>
-                            <option value="Sumatra Selatan">Sumatra Selatan</option>
-                            <option value="Sumatra Selatan">Surabaya</option>
+                            <option value="baru">Baru</option>
+                            <option value="bekas">Bekas</option>
                         </select>
                     </div>
 
@@ -60,7 +31,7 @@
     {{-- Show Product Start --}}
     <div class="row mb-3 mt-4 text-center">
         <div class="col-md themed-grid-col">
-            <div class="row pt-1 pb-1" style="background: linear-gradient(18deg, #46B7B7 0% , #213555 100%);">
+            <div class="row pt-1 pb-1" style="background-color: #213655;">
                 <div class="col-md-1 thermed-grid-col"></div>
                 <div class="col-md-2 thermed-grid-col text-light border-end">PHOTO</div>
                 <div class="col-md-2 thermed-grid-col text-light border-end">JUDUL</div>

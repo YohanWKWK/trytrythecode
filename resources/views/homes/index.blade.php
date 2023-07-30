@@ -23,17 +23,8 @@
 {{-- ini content per halaman --}}
 @section('content')
 
-    {{-- Search --}}
-    <div class="container mt-5">
-        <form class="d-flex" role="search">
-            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-            <button class="btn btn-outline-success" type="submit">Search</button>
-        </form>
-    </div>
-    <br>
-
     {{-- Kategori --}}
-    <div class="text-center my-5" style="background: linear-gradient(178deg, #213555 0%, #46B7B7 100%);">
+    {{-- <div class="text-center my-5" style="background: linear-gradient(178deg, #213555 0%, #46B7B7 100%);">
         <br>
         <h1 style="color: #FFFFFF; font-weight: 300;">KATEGORI</h1>
 
@@ -42,24 +33,24 @@
                 <div class="col-sm-4">
                     <div class="card-bg-1 card text-center mb-3" style="width: 18rem;">
                         <div class="card-body">
-                            <h5 class="card-title">AIR TAWAR</h5>
-                            <a href="{{ url('products/air-tawar') }}" class="btn btn-warning btn-style">cek</a>
+                            <h5 class="card-title title-style">HANDPHONE</h5>
+                            <a href="{{ url('products/air-tawar') }}" class="btn btn-warning btn-style btn-style-card">cek</a>
                         </div>
                     </div>
                 </div>
                 <div class="col-sm-4">
                     <div class="card-bg-2 card text-center mb-3" style="width: 18rem;">
                         <div class="card-body">
-                            <h5 class="card-title">AIR LAUT</h5>
-                            <a href="{{ url('products/air-laut') }}" class="btn btn-warning btn-style">cek</a>
+                            <h5 class="card-title title-style">LAPTOP</h5>
+                            <a href="{{ url('products/air-laut') }}" class="btn btn-warning btn-style btn-style-card">cek</a>
                         </div>
                     </div>
                 </div>
                 <div class="col-sm-4">
                     <div class="card-bg-3 card text-center mb-3" style="width: 18rem;">
                         <div class="card-body">
-                            <h5 class="card-title">TANAMAN AIR</h5>
-                            <a href="{{ url('products/tanaman-air') }}" class="btn btn-warning btn-style">cek</a>
+                            <h5 class="card-title title-style">ELEKTRONIK LAIN</h5>
+                            <a href="{{ url('products/tanaman-air') }}" class="btn btn-warning btn-style btn-style-card">cek</a>
                         </div>
                     </div>
                 </div>
@@ -67,6 +58,39 @@
         </div>
         <br>
 
+    </div> --}}
+    <div class="text-center my-5" style="background-color: #213655;">
+        <br>
+        <h1 style="color: #FFFFFF; font-weight: 300;">KATEGORI</h1>
+
+        <div class="container mt-5">
+            <div class="row">
+                <div class="card text-center mb-3 card-bg" style="width: 18rem;">
+                    <a href="{{ url('products/air-tawar') }}" class="btn-category">
+                        <div class="card-body ">
+                            <h5 class="card-title">HANDPHONE</h5>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="card text-center mb-3 card-bg-1" style="width: 18rem;">
+                    <a href="{{ url('products/air-laut') }}" class="btn-category">
+                        <div class="card-body ">
+                            <h5 class="card-title">LAPTOP</h5>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="card text-center mb-3 card-bg-2" style="width: 18rem;">
+                    <a href="{{ url('products/tanaman-air') }}" class="btn-category">
+                        <div class="card-body ">
+                            <h5 class="card-title">ELEKTRONIK LAIN</h5>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <br>
     </div>
 
     <br>
