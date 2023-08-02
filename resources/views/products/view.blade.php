@@ -12,7 +12,7 @@
         <img src="{{ asset("photos/products_photo/$product->image_path") }}" alt="{{ $product->product_name }}" width="400">
     </div>
     <div class="pt-6 p-2 text-body-emphasis bg-body-secondary d-flex justify-content-center align-items-center"
-        style="background: linear-gradient(18deg, #46B7B7 0% , #213555 100%);">
+        style="background: linear-gradient(18deg, #213555 0% , #213555 100%);">
         <h2 class="text-light">{{ $product_name }}</h2>
     </div>
     <div class="pt-6 mb-4 text-body-emphasis bg-body-secondary d-flex justify-content-center align-items-center">

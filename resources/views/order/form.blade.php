@@ -24,7 +24,7 @@
             </div>
             <div class="col-md-4 offset-md-1">
                 <div class="p-2 mb-2 col-md-12 rounded bg-body-secondary d-flex justify-content-center align-items-center"
-                    style="background: linear-gradient(1deg, #213555 0%, #46B7B7 100%); color: white;">
+                    style="background: linear-gradient(1deg, #213555 0%, #213555 100%); color: white;">
                     <h4>Order Form</h4>
                 </div>
                 <form action="" method="post">

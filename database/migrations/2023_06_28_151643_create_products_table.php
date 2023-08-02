@@ -15,7 +15,7 @@ return new class extends Migration
             $table->id();
             $table->unsignedBigInteger('user_id');
             $table->string('product_name');
-            $table->enum('category', ['air tawar', 'air laut', 'tanaman air']);
+            $table->enum('category', ['handphone', 'laptop', 'elektronik lain']);
             $table->text('description');
             $table->decimal('price');
             $table->string('image_path');

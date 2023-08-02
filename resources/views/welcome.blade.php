@@ -67,7 +67,7 @@
         <div class="container mt-5">
             <div class="row">
                 <div class="card text-center mb-3 card-bg" style="width: 18rem;">
-                    <a href="{{ url('/product') }}" class="btn-category">
+                    <a href="{{ url('/product/handphone') }}" class="btn-category">
                         <div class="card-body ">
                             <h5 class="card-title">HANDPHONE</h5>
                         </div>
@@ -75,7 +75,7 @@
                 </div>
 
                 <div class="card text-center mb-3 card-bg-1" style="width: 18rem;">
-                    <a href="{{ url('/product') }}" class="btn-category">
+                    <a href="{{ url('/product/laptop') }}" class="btn-category">
                         <div class="card-body ">
                             <h5 class="card-title">LAPTOP</h5>
                         </div>
@@ -83,7 +83,7 @@
                 </div>
 
                 <div class="card text-center mb-3 card-bg-2" style="width: 18rem;">
-                    <a href="{{ url('/product') }}" class="btn-category">
+                    <a href="{{ url('/productel/ektronik-lain') }}" class="btn-category">
                         <div class="card-body ">
                             <h5 class="card-title">ELEKTRONIK LAIN</h5>
                         </div>

@@ -96,7 +96,7 @@
 
     <div class="row mb-3 mt-4 text-center bg-primary bg-gradient">
         <div class="col-md themed-grid-col">
-            <div class="row pt-1 pb-1" style="background: linear-gradient(18deg, #46B7B7 0% , #213555 100%);">
+            <div class="row pt-1 pb-1" style="background:  #213555;">
                 <div class="col-md-1 thermed-grid-col"></div>
                 <div class="col-md-2 thermed-grid-col text-light border-end">PHOTO</div>
                 <div class="col-md-2 thermed-grid-col text-light border-end">JUDUL</div>

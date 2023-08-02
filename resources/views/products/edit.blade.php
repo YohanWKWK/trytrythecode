@@ -32,9 +32,9 @@
             <div class="mb-3">
                 <label for="category" class="form-label">Category</label>
                 <select class="form-select" id="category" name="category" aria-valuetext="{{ $product->category }}">
-                    <option value="air tawar" @if ($product->category === 'air tawar') selected @endif>Air Tawar</option>
-                    <option value="air laut" @if ($product->category === 'air laut') selected @endif>Air Laut</option>
-                    <option value="tanaman air" @if ($product->category === 'tanaman air') selected @endif>Tanaman Air</option>
+                    <option value="handphone" @if ($product->category === 'handphone') selected @endif>Handphone</option>
+                    <option value="laptop" @if ($product->category === 'laptop') selected @endif>Laptop</option>
+                    <option value="elektronik lain" @if ($product->category === 'elektronik lain') selected @endif>Elektronik Lain</option>
                 </select>
                 @if ($errors->has('category'))
                     <span class="text-danger">{{ $errors->first('category') }} </span>
@@ -58,8 +58,8 @@
             <div class="mb-3">
                 <label for="order_type" class="form-label">Order Type</label>
                 <select class="form-select" id="order_type" name="order_type">
-                    <option value="wts" @if ($product->order_type === 'wts') selected @endif>Want to Sell</option>
-                    <option value="wtb" @if ($product->order_type === 'wtb') selected @endif>Want to Buy</option>
+                    <option value="new" @if ($product->order_type === 'new') selected @endif>Baru</option>
+                    <option value="used" @if ($product->order_type === 'used') selected @endif>Bekas</option>
                 </select>
                 @if ($errors->has('order_type'))
                     <span class="text-danger">{{ $errors->first('order_type') }} </span>
